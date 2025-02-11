@@ -14,16 +14,17 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(auth -> auth
-            	.requestMatchers("/","/images/**").permitAll() // Allow access to root URL
-                .anyRequest().authenticated() // Secure all pages
+                .requestMatchers("/", "/login", "/register", "/images/**").permitAll() // ✅ Allow register
+                .anyRequest().authenticated() // 🔒 Secure everything else
             )
             .formLogin(login -> login
-                .loginPage("/login") // Use custom login page
-                .defaultSuccessUrl("/home", true) // Redirect to home after login
+                .loginPage("/login") 
+                .defaultSuccessUrl("/home", true)
+                .failureUrl("/login?error=true") // Redirect to login page with error parameter
                 .permitAll()
             )
             .logout(logout -> logout
-                .logoutSuccessUrl("/login?logout") // Redirect to login after logout
+                .logoutSuccessUrl("/login?logout")
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID")
                 .permitAll()
