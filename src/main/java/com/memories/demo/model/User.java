@@ -1,4 +1,4 @@
-package com.memories.demo;
+package com.memories.demo.model;
 
 import jakarta.persistence.*;
 import java.util.List;

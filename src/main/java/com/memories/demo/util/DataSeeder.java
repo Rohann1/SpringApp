@@ -1,8 +1,11 @@
-package com.memories.demo;
+package com.memories.demo.util;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
+
+import com.memories.demo.model.User;
+import com.memories.demo.repository.UserRepository;
 
 @Component
 public class DataSeeder implements CommandLineRunner {

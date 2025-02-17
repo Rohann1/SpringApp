@@ -1,4 +1,4 @@
-package com.memories.demo;
+package com.memories.demo.controller;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

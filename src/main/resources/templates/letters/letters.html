@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Letters</title>
+</head>
+<body>
+    <h1>Your Letters</h1>
+    <div th:each="letter : ${letters}" class="letter-container">
+        <div th:if="${canViewLetters}" class="letter-content">
+            <p><strong>Content:</strong> <span th:text="${letter.content}"></span></p>
+        </div>
+        <div th:unless="${canViewLetters}" class="letter-content-locked">
+            <p><strong>Content:</strong> Letters can only be opened between December 25th and January 5th.</p>
+        </div>
+        <p><strong>Created At:</strong> <span th:text="${letter.createdAt}"></span></p>
+        <hr/>
+    </div>
+
+    <h2>Write a New Letter</h2>
+    <form action="/letters" method="post">
+        <textarea id="content" name="content" rows="5" cols="50" placeholder="Write something nice that happened this week..."></textarea><br/>
+        <button type="submit">Save Letter</button>
+    </form>
+</body>
+</html>

@@ -1,8 +1,12 @@
-package com.memories.demo;
+package com.memories.demo.repository;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import com.memories.demo.model.Letter;
+import com.memories.demo.model.User;
+
 import java.time.LocalDateTime;
 import java.util.List;
 

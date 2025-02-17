@@ -1,6 +1,10 @@
-package com.memories.demo;
+package com.memories.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.memories.demo.model.Letter;
+import com.memories.demo.model.User;
+
 import java.util.List;
 
 public interface LetterRepository extends JpaRepository<Letter, Long> {

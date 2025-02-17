@@ -1,8 +1,10 @@
-package com.memories.demo;
+package com.memories.demo.util;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import com.memories.demo.model.User;
 
 import java.util.Collection;
 import java.util.Collections;
