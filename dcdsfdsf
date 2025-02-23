@@ -1,0 +1,29 @@
+[33mcommit 7e2fff69c48f1490266264d484c51eb2beeb450f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Rohann1 <rohanyaadav14@gmail.com>
+Date:   Tue Feb 18 02:55:48 2025 +0530
+
+    Writing and seeing the list of Letters functionality added with DB integration.
+
+[33mcommit 8d3b0afbf681653f6c7cb8852a5f52d72fe87e11[m
+Author: Rohann1 <rohanyaadav14@gmail.com>
+Date:   Mon Feb 17 16:10:08 2025 +0530
+
+    Introduction of Letters
+
+[33mcommit 6118c28235ce2862802f7150ed80338a37b7c8ed[m
+Author: Rohann1 <rohanyaadav14@gmail.com>
+Date:   Wed Feb 12 02:45:44 2025 +0530
+
+    Registration functionality added with DB
+
+[33mcommit 1936cb763e232b561878643f41ba91f8532cf704[m
+Author: Rohann1 <rohanyaadav14@gmail.com>
+Date:   Tue Feb 11 22:45:53 2025 +0530
+
+    Registration modal, improved Login UI
+
+[33mcommit 95241c4fde234e10c666bdf78a23196c4dd60da4[m
+Author: Rohann1 <rohanyaadav14@gmail.com>
+Date:   Tue Feb 11 00:39:58 2025 +0530
+
+    Login page-Home page checkpoint
