@@ -27,9 +27,6 @@ public class DataSeeder implements CommandLineRunner {
             admin.setUsername("admin");
             admin.setPassword(passwordEncoder.encode("123")); // Store hashed password
             userRepository.save(admin);
-            System.out.println("Admin user created with hashed password!");
-        } else {
-            System.out.println("Admin user already exists.");
         }
     }
 }
