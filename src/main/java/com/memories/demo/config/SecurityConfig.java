@@ -25,6 +25,7 @@ public class SecurityConfig {
                 .requestMatchers("/").permitAll()
                 .requestMatchers("/demo").permitAll()
                 .requestMatchers("/", "/login", "/register", "/images/**").permitAll()
+                .requestMatchers("/health", "/error").permitAll()
                 .anyRequest().authenticated()
             )
             .formLogin(login -> login
