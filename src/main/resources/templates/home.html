@@ -140,6 +140,17 @@
             background-color: #11114d; /* Darker Navy */
         }
 
+        .input-area button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .input-area textarea:disabled {
+            background-color: #f8f8f8;
+            cursor: not-allowed;
+        }
+
         .memory-section {
             text-align: center;
             padding-top: 5px;  /* Reduced padding */
@@ -374,8 +385,8 @@
             <main class="right-section">
                 <section class="input-area">
                     <form th:action="@{/letters}" method="post">
-                        <textarea name="content" placeholder="Write your letters here" rows="3"></textarea>
-                        <button type="submit">SUBMIT</button>
+                        <textarea name="content" placeholder="Write your letters here" rows="3" th:disabled="${username == 'DummyUser'}"></textarea>
+                        <button type="submit" th:disabled="${username == 'DummyUser'}">SUBMIT</button>
                     </form>
                 </section>
             </main>
@@ -387,7 +398,7 @@
             
             <!-- Message for dummy user -->
             <div th:if="${username == 'DummyUser'}" class="alert alert-info">
-                This is a demo view showcasing the letter collection feature. In the actual application, letters are only visible during the New Year period (December 25th - January 5th) for reflection and reminiscence.
+                <strong>Demo Notice</strong>: This is a demonstration of the letter collection feature; submissions are disabled. Please create a new user account for full functionality. Letters will only be visible during the New Year period (December 25th - January 5th) for reflection.
             </div>
             
             <!-- Message for regular users -->
