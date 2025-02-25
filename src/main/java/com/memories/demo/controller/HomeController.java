@@ -36,6 +36,11 @@ public class HomeController {
     @Autowired
     private LetterRepository letterRepository;
 
+    @GetMapping("/")
+    public String redirectToDemo() {
+        return "redirect:/demo";
+    }
+
     @GetMapping("/home")
     public String home(Model model, Principal principal) {
         String username = principal.getName();
