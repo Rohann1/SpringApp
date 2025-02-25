@@ -415,8 +415,11 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Fetch Letter Count code remains unchanged
-            fetch('http://localhost:8082/api/letter_count')
+            // Get the current origin (hostname) dynamically
+            const API_BASE_URL = window.location.origin;
+
+            // Updated fetch request to use the current origin
+            fetch(`${API_BASE_URL}/api/letter_count`)
                 .then(response => response.json())
                 .then(data => {
                     const letterCountElement = document.querySelector('.letter-count');
